@@ -105,7 +105,7 @@ public class UsbDeviceWithInfo {
           "installPermissionHandler must be called before requesting permission");
     }
     ((UsbManager) context.getSystemService(Context.USB_SERVICE)).requestPermission(device,
-        PendingIntent.getBroadcast(context, 0, new Intent(ACTION_USB_PERMISSION), 0));
+            PendingIntent.getBroadcast(context, 0, new Intent(ACTION_USB_PERMISSION), PendingIntent.FLAG_MUTABLE));
   }
 
   /**
